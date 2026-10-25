@@ -1,0 +1,13 @@
+{
+  "name": "formgate-btn-test",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "formgate-btn-test-db",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

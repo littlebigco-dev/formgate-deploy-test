@@ -1,0 +1,19 @@
+{
+  "name": "formgate-deploy-test",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Throwaway experiment: can a Deploy to Cloudflare button gate a private build behind a license key?",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "LICENSE_KEY": { "description": "Your license key. For this test enter any dummy text, for example TEST-NOT-REAL." },
+      "ADMIN_TOKEN": { "description": "Any long random text. For this test enter anything." }
+    }
+  }
+}
